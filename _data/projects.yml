@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────────────────────
+#  YOUR PROJECTS
+#  To ADD a project: copy one block below (from "- title:" down to
+#  the last line before the next "- title:"), paste it at the
+#  bottom, and change the words.
+#  To REMOVE a project: delete its whole block.
+#  To REORDER: move blocks up or down. The first one shows first.
+#
+#  Rules that keep the site working:
+#   • Keep the spacing exactly as it is (2 spaces before each field).
+#   • If your text contains a colon ( : ), wrap the text in "quotes".
+#   • "link" is optional. Delete that line if there's no link.
+#   • "featured: true" gives a project the large highlighted card.
+# ─────────────────────────────────────────────────────────────
+
+- title: Spotting early warning signs in council documents
+  category: MSc Dissertation · Industry project with Rebel Hive
+  featured: true
+  question: Can the way a council writes about itself reveal trouble before an official inspection does?
+  what_i_did: I collected public governance documents from English councils at three stages (before government intervention, after it, and during normal running). I then trained a computer to read and compare their language and built a working prototype that flags warning signs and explains why.
+  why_it_matters: Audits usually find problems late. Earlier signals could help councils and communities act sooner. The project received a distinction-level mark.
+  tools: [Python, Natural Language Processing, Topic Modelling, Machine Learning]
+
+- title: What customers really say about restaurants and hotels
+  category: Customer feedback analysis
+  question: What do thousands of online reviews tell a business that star ratings alone don't?
+  what_i_did: I analysed 3,000 Yelp reviews automatically, measured how positive or negative each one was, and pulled out the complaints and compliments that came up again and again.
+  why_it_matters: Businesses get a clear list of what to fix and what to keep doing, without reading every review by hand.
+  tools: [Python, Sentiment Analysis, NLTK]
+  link: https://github.com/amaraiku/yelp-sentiment-analysis
+
+- title: Predicting which bank customers will say yes
+  category: Prediction model
+  question: Which customers are most likely to sign up for a savings product after a marketing call?
+  what_i_did: I built and compared two prediction models on real bank marketing data. I also corrected for the fact that only a small share of customers say yes, so the models didn't simply ignore them.
+  why_it_matters: The bank can focus calls on the people most likely to be interested, saving staff time and customer patience.
+  tools: [Python, Machine Learning, Neural Networks]
+  link: https://github.com/amaraiku/Bank-Marketing-Subscription-Prediction
+
+- title: Finding lifestyle patterns linked to obesity risk
+  category: Health data analysis
+  question: Do people with similar eating and activity habits share a similar obesity risk?
+  what_i_did: I grouped people by their everyday habits without telling the computer the answer in advance, then tested how distinct the groups were and which ones carried higher risk.
+  why_it_matters: Clear risk groups make it easier to give earlier, better-targeted health advice.
+  tools: [Python, Clustering, K-Means]
+  link: https://github.com/amaraiku/Obesity-Risk-Behaviour-Clustering

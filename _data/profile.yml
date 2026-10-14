@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────
+#  YOUR DETAILS
+#  Change the words after each colon. If your text contains a
+#  colon ( : ), wrap it in "quotes". Keep the spacing as it is.
+# ─────────────────────────────────────────────────────────────
+
+name: Amara Shiloh Iku
+role: Data Scientist
+location: Manchester, UK
+headline: I turn messy text and data into clear answers people can act on.
+about: I'm a data scientist with an MSc in Data Science from the University of Salford and a background in microbiology and medical research. I specialise in teaching computers to read and understand large amounts of text, and in building prediction models that support real decisions in public services, business and health.
+
+email: ashilohiku@gmail.com
+linkedin: https://www.linkedin.com/in/amara-s-iku
+github: https://github.com/amaraiku
+
+# What you can do — one short phrase per line
+skills:
+  - title: Understanding text
+    detail: Reading thousands of documents or reviews automatically and finding the themes that matter.
+  - title: Predicting outcomes
+    detail: Building models that estimate who is likely to act, buy or be at risk.
+  - title: Finding patterns
+    detail: Grouping people or records by behaviour to reveal hidden segments.
+  - title: Explaining results
+    detail: Turning analysis into clear findings for non-technical audiences.
+
+tools: [Python, SQL, scikit-learn, Keras, NLTK, Jupyter]
+
+education:
+  - degree: MSc Data Science (Merit)
+    place: University of Salford
+    year: "2026"
+  - degree: BSc Microbiology
+    place: Research thesis with 100+ samples collected
+    year: ""

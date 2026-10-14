@@ -1,0 +1,108 @@
+---
+---
+{%- assign p = site.data.profile -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ p.name }} | {{ p.role }}</title>
+<meta name="description" content="{{ p.headline }}">
+<meta property="og:title" content="{{ p.name }} | {{ p.role }}">
+<meta property="og:description" content="{{ p.headline }}">
+<meta property="og:image" content="assets/photo.jpg">
+<link rel="icon" href="assets/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="inner">
+    <a class="brand" href="#top">{{ p.name }}</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="inner hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">{{ p.role }} · {{ p.location }}</p>
+      <h1>{{ p.headline }}</h1>
+      <p class="about">{{ p.about }}</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="{{ p.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+    <img class="photo" src="assets/photo.jpg" alt="Portrait of {{ p.name }}" width="460" height="460">
+  </div>
+</header>
+
+<main>
+  <section id="projects" class="inner section">
+    <h2>Projects</h2>
+    <p class="section-intro">Each project starts with a real question. Here is what I asked, what I did, and why it matters.</p>
+    <div class="projects">
+      {%- for proj in site.data.projects %}
+      <article class="card{% if proj.featured %} featured{% endif %}">
+        <p class="category">{{ proj.category }}</p>
+        <h3>{{ proj.title }}</h3>
+        <div class="qa">
+          <div><h4>The question</h4><p>{{ proj.question }}</p></div>
+          <div><h4>What I did</h4><p>{{ proj.what_i_did }}</p></div>
+          <div><h4>Why it matters</h4><p>{{ proj.why_it_matters }}</p></div>
+        </div>
+        <div class="card-foot">
+          <ul class="tags">{% for t in proj.tools %}<li>{{ t }}</li>{% endfor %}</ul>
+          {%- if proj.link %}<a class="more" href="{{ proj.link }}" target="_blank" rel="noopener">View the work →</a>{% endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section id="skills" class="band">
+    <div class="inner section">
+      <h2>What I can do</h2>
+      <div class="skills">
+        {%- for s in p.skills %}
+        <div class="skill"><h3>{{ s.title }}</h3><p>{{ s.detail }}</p></div>
+        {%- endfor %}
+      </div>
+      <p class="tools-label">Tools I use</p>
+      <ul class="tags">{% for t in p.tools %}<li>{{ t }}</li>{% endfor %}</ul>
+    </div>
+  </section>
+
+  <section id="education" class="inner section">
+    <h2>Education</h2>
+    <div class="edu">
+      {%- for e in p.education %}
+      <div class="edu-row"><div><strong>{{ e.degree }}</strong><span>{{ e.place }}</span></div><span class="year">{{ e.year }}</span></div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section id="contact" class="band contact-band">
+    <div class="inner section contact">
+      <h2>Let's talk</h2>
+      <p>I'm open to data science roles and collaborations. The quickest way to reach me is email or LinkedIn.</p>
+      <div class="contact-list">
+        <div><span class="label">Email</span><span class="value">{{ p.email }}</span></div>
+        <div><span class="label">LinkedIn</span><a class="value" href="{{ p.linkedin }}" target="_blank" rel="noopener">{{ p.linkedin | remove: "https://" | remove: "www." }}</a></div>
+        <div><span class="label">GitHub</span><a class="value" href="{{ p.github }}" target="_blank" rel="noopener">{{ p.github | remove: "https://" }}</a></div>
+      </div>
+      <a class="btn primary" href="mailto:{{ p.email }}">Email me</a>
+    </div>
+  </section>
+</main>
+
+<footer class="inner footer">© {{ "now" | date: "%Y" }} {{ p.name }}</footer>
+</body>
+</html>
