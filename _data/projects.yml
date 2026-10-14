@@ -14,11 +14,11 @@
 # ─────────────────────────────────────────────────────────────
 
 - title: Spotting early warning signs in council documents
-  category: MSc Dissertation · Industry project with Rebel Hive
+  category: Project with Rebel Hive
   featured: true
   question: Can the way a council writes about itself reveal trouble before an official inspection does?
   what_i_did: I collected public governance documents from English councils at three stages (before government intervention, after it, and during normal running). I then trained a computer to read and compare their language and built a working prototype that flags warning signs and explains why.
-  why_it_matters: Audits usually find problems late. Earlier signals could help councils and communities act sooner. The project received a distinction-level mark.
+  why_it_matters: Audits usually find problems late. Earlier signals could help councils and communities act sooner.
   tools: [Python, Natural Language Processing, Topic Modelling, Machine Learning]
 
 - title: What customers really say about restaurants and hotels
